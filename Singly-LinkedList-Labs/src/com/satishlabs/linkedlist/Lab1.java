@@ -15,13 +15,11 @@ public class Lab1 {
 	}
 
 	private static void displayList(Node headNode) {
-		// Base Condition
-		if (headNode == null)
-			return;
-
-		System.out.print("[" + headNode.data + "]" + "\t");
-		displayList(headNode.next);
-		
+		Node currentNode = headNode;
+		while (currentNode != null) {
+			System.out.print("[" + currentNode.data + "]" + "\t");
+			currentNode = currentNode.next;
+		}
 		System.out.println("\n");
 	}
 }
